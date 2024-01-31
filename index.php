@@ -33,7 +33,7 @@ function loginForm(){
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Chatsterbox</title>
+        <title>Chatterbox</title>
         <meta name="description" content="Chatterbox" />
         <link rel="stylesheet" href="style.css" />
     </head>
