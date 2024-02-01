@@ -1,0 +1,171 @@
+body {
+  background-color:blueviolet;
+  text-align: center;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+h4{
+  text-align: left;
+  text-decoration: underline;
+  color: black;
+}
+
+a{
+  color: black; 
+  font-size: 1.2rem;
+}
+
+h1{
+  color: black;
+  text-decoration: none;
+  font-size: 1.2;
+}
+
+h3{
+  color: black;
+  text-decoration: underline;
+}
+
+mark{
+  background-color: black;
+  color: indigo;
+}
+
+#cgw1, #gw1{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw2, #gw2{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw3, #gw3{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw4, #gw4{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw5, #gw5{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw6, #gw6{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw7, #gw7{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw8, #gw8{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw9, #gw9{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgw10, #gw10{
+  color: white;
+  text-decoration-color: blueviolet;
+}
+
+#cgws, #gws{
+  color: pink;
+  text-decoration-color: blueviolet;
+}
+
+#cnes, #nes{
+  color: red;
+  text-decoration-color: blueviolet;
+}
+
+#cgb, #gb{
+  color: lawngreen;
+  text-decoration-color: blueviolet;
+}
+
+#csnes, #snes{
+  color: plum;
+  text-decoration-color: blueviolet;
+}
+
+#cvb, #vb{
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+#cn64, #n64{
+  color: grey;
+  text-decoration-color: blueviolet;
+}
+
+#cgbc, #gbc{
+  color: maroon;
+  text-decoration-color: blueviolet;
+}
+
+#cgba, #gba{
+  color: indigo;
+  text-decoration-color: blueviolet;
+}
+
+#cgbasp{
+  color: rgb(196,212,254);
+  text-decoration-color: blueviolet;
+}
+
+#cgbm{
+  color: goldenrod;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+#cpk, #pkmini{
+  color: dodgerblue;
+  text-decoration-color: blueviolet;
+}  
+  
+#cgcn, #gcn{
+  color: indigo;
+  text-decoration-color: blueviolet;
+}
+
+#cds, #cdsi, #ds, #dsi{
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+#cwii, #wii, #cwiiu, #wiiu{
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: aqua;
+}
+
+#c3ds, #threeds{
+  color: darkturquoise;
+  text-decoration: underline;
+  text-decoration-color: black
+}
+
+#cnx, #nx{
+  color: aqua;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+
+

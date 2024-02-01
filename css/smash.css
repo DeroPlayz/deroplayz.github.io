@@ -1,0 +1,26 @@
+body{
+  background-color: brown;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1{
+  color: chocolate;
+}
+
+a{
+  text-align: left;
+  text-decoration: underline;
+  color: black;
+}
+
+h4{
+  text-align: left;
+  text-decoration: underline;
+  color: black;
+}
+
+.music{
+  color: white;
+  text-align: left;
+}

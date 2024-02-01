@@ -1,0 +1,66 @@
+h2{
+  text-align: center;
+  color: cadetblue;
+}
+body{
+  background-color: black;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+h3{
+  text-align: left;
+  color: cadetblue;
+  text-decoration: none;
+}
+a{
+  color: cadetblue;
+  font-size: 2.5 ;
+  text-decoration: none;
+}
+
+#nintendo{
+  color: brown;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+#pangolin{
+  color: tan;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+#mychannel{
+  color: red;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+#smash{
+  color: blue;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+#books{
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+#dube{
+  color: gold;
+  font-size: 2.4rem;
+  text-decoration: underline;
+}
+
+#game{
+  color: chartreuse;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+#ml{
+  color: chartreuse;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
