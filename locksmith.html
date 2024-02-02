@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Mirror</title>
+  <style>
+    /* Your styles here */
+  </style>
+</head>
+<body>
+  <label for="siteLink">Enter a Link:</label>
+  <input type="text" id="siteLink" placeholder="Paste link here">
+  <button onclick="mirrorSite()">Mirror Site</button>
+  <div id="mirroredContent"></div>
+
+  <script>
+    function mirrorSite() {
+      const link = document.getElementById('siteLink').value;
+      const mirroredContent = document.getElementById('mirroredContent');
+
+      // Fetch the content from the link and insert it into the mirroredContent div
+      fetch(link)
+        .then(response => response.text())
+        .then(data => mirroredContent.innerHTML = data)
+        .catch(error => console.error('Error fetching:', error));
+    }
+  </script>
+</body>
+</html>
