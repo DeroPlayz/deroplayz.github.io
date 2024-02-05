@@ -9,22 +9,15 @@
   </style>
 </head>
 <body>
-  <label for="siteLink">Enter a Link:</label>
-  <input type="text" id="siteLink" placeholder="Paste link here">
-  <button onclick="mirrorSite()">Mirror Site</button>
-  <div id="mirroredContent"></div>
-
+  <form action="/fetch-content" method="post">
+    <input type="text" id="url" name="url" placeholder="Enter URL">
+    <button type="submit">Submit</button>
+  </form>
   <script>
-    function mirrorSite() {
-      const link = document.getElementById('siteLink').value;
-      const mirroredContent = document.getElementById('mirroredContent');
-
-      // Fetch the content from the link and insert it into the mirroredContent div
-      fetch(link)
-        .then(response => response.text())
-        .then(data => mirroredContent.innerHTML = data)
-        .catch(error => console.error('Error fetching:', error));
-    }
+    app.post('/fetch-content', function(req, res) {
+      const url = req.body.url;
+      // Fetch the content from the provided URL
+    });
   </script>
 </body>
 </html>
