@@ -10,15 +10,15 @@ var server = http.Server(app);
 var io = socketIO(server);
 
 app.set('port', 5000);
-app.use('/static', express.static(__dirname + '/static'));
+app.use('/static', express.static(__dirname));
 
 // Routing
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname, 'static/index.html'));
+    response.sendFile(path.join(__dirname, 'chatlogin.html'));
 
 });
 app.get('/chat', function(request, response) {
-    response.sendFile(path.join(__dirname, 'static/chat.html'));
+    response.sendFile(path.join(__dirname, 'chatroom.html'));
 });
 
 // Starts the server.
