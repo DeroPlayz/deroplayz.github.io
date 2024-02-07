@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Mirror</title>
-  <style>
-    /* Your styles here */
-  </style>
+    <meta charset="UTF-8">
+    <title>URL to HTML Converter</title>
 </head>
 <body>
-  <form action="/fetch-content" method="post">
-    <input type="text" id="url" name="url" placeholder="Enter URL">
-    <button type="submit">Submit</button>
-  </form>
-  <script>
-    app.post('/fetch-content', function(req, res) {
-      const url = req.body.url;
-      // Fetch the content from the provided URL
-    });
-  </script>
+    <h1>Enter a URL to convert its HTML to text</h1>
+    <form action="/convert" method="post">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Convert</button>
+    </form>
 </body>
 </html>
