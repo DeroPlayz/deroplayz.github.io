@@ -10,7 +10,7 @@ var server = http.Server(app);
 var io = socketIO(server);
 
 app.set('port', 5000);
-app.use('/static', express.static(__dirname));
+//app.use('/static', express.static(__dirname));
 
 // Routing
 app.get('/', function(request, response) {
@@ -63,4 +63,4 @@ io.on('connection', function(socket) {
     });
 });
 
-/// socket.emit('server message', data);
+socketIO.emit('server message', data);
