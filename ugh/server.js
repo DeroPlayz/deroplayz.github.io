@@ -1,7 +1,15 @@
+const fs = require('fs');
+const path = require('path');
 const WebSocket = require('ws');
 
+// Ensure the directory for the chat history file exists
+const dirPath = path.dirname('./chat_history.txt');
+if (!fs.existsSync(dirPath)) {
+  fs.mkdirSync(dirPath, { recursive: true });
+}
+
 // Create a WebSocket server
-const wss = new WebSocket.Server({ port:  8080 });
+const wss = new WebSocket.Server({ port:   8080 });
 
 // Handle new connections
 wss.on('connection', (ws) => {
@@ -20,7 +28,11 @@ wss.on('connection', (ws) => {
 
     // Save the message to a text file
     fs.appendFile('chat_history.txt', `${message}\n`, (err) => {
-      if (err) throw err;
+      if (err) {
+        console.error('Error writing to file:', err);
+      } else {
+        console.log('Message saved to chat_history.txt');
+      }
     });
   });
 
@@ -30,4 +42,4 @@ wss.on('connection', (ws) => {
   });
 });
 
-console.log('WebSocket server started on port  8080');
+console.log('WebSocket server started on port   8080');
