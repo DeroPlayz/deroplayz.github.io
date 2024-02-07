@@ -1,15 +1,17 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Chat!</title>
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
-		<script src="node_modules/socket.io/client-dist/socket.io.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body>
-		<div id="messages"></div>
-		<div id="bottom">
-			<input id="in-msg" type="text" placeholder="Type message here, then hit enter to send."></input>
-		</div>
-		<script src="chat.js"></script>
-	</body>
+<head>
+    <title>Simple Chat</title>
+</head>
+<body>
+    <div id="chatbox">
+        <!-- Messages will be appended here -->
+    </div>
+    <form id="messageForm">
+        <input type="text" id="messageInput" placeholder="Type your message...">
+        <button type="submit">Send</button>
+    </form>
+
+    <script src="chat.js"></script>
+</body>
 </html>
