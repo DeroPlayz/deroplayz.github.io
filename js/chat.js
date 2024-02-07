@@ -17,7 +17,7 @@ app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, 'chatlogin.html'));
 
 });
-app.get('/chatroom', function(request, response) {
+app.get('chatroom.html', function(request, response) {
     response.sendFile(path.join(__dirname, 'chatroom.html'));
 });
 
