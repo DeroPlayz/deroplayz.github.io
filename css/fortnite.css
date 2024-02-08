@@ -1,0 +1,25 @@
+h2{
+    color: lime; 
+    text-decoration: none;
+    text-align: center;
+  }
+  
+body{
+background-color: blueviolet;
+font-family: 'Mochiy Pop P One', sans-serif;
+}
+  
+a{
+    color: black;
+text-decoration: underline;
+text-align: left;
+}
+
+h3{
+color: black;
+text-decoration: none;
+}
+
+td{
+text-align: center;
+}
