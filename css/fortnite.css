@@ -23,3 +23,27 @@ text-decoration: none;
 td{
 text-align: center;
 }
+
+.common{
+  color: grey
+}
+
+.uncommon{
+  color: green
+}
+
+.rare{
+  color: blue
+}
+
+.epic{
+  color: purple
+}
+
+.legendary{
+  color: orange
+}
+
+.mythic{
+  color: gold
+}
