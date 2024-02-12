@@ -46,3 +46,7 @@ td{
 .mythic{
   color: gold
 }
+
+#attachments{
+  vertical-align: top;
+}
