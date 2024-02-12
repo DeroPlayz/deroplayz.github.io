@@ -23,23 +23,23 @@ td{
   text-align: center;
 }
 
-#common{
+.common{
   color: grey
 }
 
-#uncommon{
+.uncommon{
   color: green
 }
 
-#rare{
+.rare{
   color: blue
 }
 
-#epic{
+.epic{
   color: purple
 }
 
-#legendary{
+.legendary{
   color: orange
 }
 
