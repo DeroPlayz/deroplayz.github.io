@@ -35,6 +35,12 @@ a{
   text-decoration: none;
 }
 
+#mcmods{
+  color: lime;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
 #smash{
   color: blue;
   font-size: 2.5rem;
