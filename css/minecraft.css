@@ -5,7 +5,7 @@ img{
 
 @font-face{
     font-family: 'Minecraft';
-    src: url('./minecraft.ttf') format('truetype');
+    src: url('minecraft.ttf');
     font-weight: normal;
     font-style: normal;
 }
