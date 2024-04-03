@@ -3,9 +3,11 @@ img{
     height: 150px
   }
 
-@font-face{
-    font-family: 'Minecraft';
-    src: url('minecraft.ttf') format('truetype');
+@font-face {
+    font-family: 'minecraftmedium';
+    src: url('minecraft-webfont.woff2') format('woff2'),
+         url('minecraft-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
