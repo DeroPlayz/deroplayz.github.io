@@ -4,8 +4,12 @@ img{
   }
 
 @font-face{
-    font-family: Minecraft;
+    font-family: 'Minecraft';
+    src: url('minecraft.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    src: local('Minecraft'), url('minecraft.ttf') format('truetype');
+}
+
+t{
+  font-family: 'Minecraft';
 }
