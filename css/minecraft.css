@@ -4,6 +4,6 @@ img{
   }
 
 @font-face{
-    font-family: Minecraft;
+    font-family: 'Courier New', Courier, monospace;
     src: local("minecraft.ttf");
 }
