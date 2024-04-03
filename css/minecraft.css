@@ -3,9 +3,9 @@ img{
     height: 150px
   }
 
-  @font-face{
-    font-family: 'Minecraft';
+@font-face{
+    font-family: Minecraft;
     font-weight: normal;
     font-style: normal;
     src: local('Minecraft'), url('minecraft.ttf') format('truetype');
-  }
+}
