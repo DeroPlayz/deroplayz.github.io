@@ -10,5 +10,8 @@ img{
           url('minecraft-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+h1{
+  font-family: minecraftmedium, 'Courier New', monospace;
 }
