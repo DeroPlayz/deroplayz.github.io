@@ -12,7 +12,7 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .button {
+        .buttonA {
             flex: 1 0 50%; /* Takes up half the width and full height */
             display: flex;
             align-items: center;
@@ -20,7 +20,43 @@
             font-size: 24px;
             cursor: pointer;
             border: none;
-            background-color: #4CAF50; /* Green background */
+            background-color: #ff0000; /* Green background */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .buttonB {
+            flex: 1 0 50%; /* Takes up half the width and full height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: #2200ff; /* Green background */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .buttonC {
+            flex: 1 0 50%; /* Takes up half the width and full height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: #eeff00; /* Green background */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .buttonD {
+            flex: 1 0 50%; /* Takes up half the width and full height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: #00ff08; /* Green background */
             color: white;
             transition: background-color 0.3s;
         }
@@ -42,10 +78,10 @@
     </style>
 </head>
 <body>
-    <button class="button top-left" id="soundButton1">Play Sound 1</button>
-    <button class="button top-right" id="soundButton2">Play Sound 2</button>
-    <button class="button bottom-left" id="soundButton3">Play Sound 3</button>
-    <button class="button bottom-right" id="soundButton4">Play Sound 4</button>
+    <button class="buttonA top-left" id="soundButton1">Play Sound 1</button>
+    <button class="buttonB top-right" id="soundButton2">Play Sound 2</button>
+    <button class="buttonC bottom-left" id="soundButton3">Play Sound 3</button>
+    <button class="buttonD bottom-right" id="soundButton4">Play Sound 4</button>
 
     <audio id="soundEffect1" src="https://www.example.com/your-sound-file-1.mp3"></audio>
     <audio id="soundEffect2" src="https://www.example.com/your-sound-file-2.mp3"></audio>
