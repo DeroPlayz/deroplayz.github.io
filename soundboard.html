@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Soundboard 🗣🗣🗣</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .buttonA {
-            flex: 2 0 50%; /* Takes up half the width and full height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            border: none;
-            background-color: #ff0000; /* Green background */
-            color: white;
-            transition: background-color 0.3s;
-        }
-        .buttonB {
-            flex: 2 0 50%; /* Takes up half the width and full height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            border: none;
-            background-color: #2200ff; /* Green background */
-            color: white;
-            transition: background-color 0.3s;
-        }
-        .buttonC {
-            flex: 2 0 50%; /* Takes up half the width and full height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            border: none;
-            background-color: #eeff00; /* Green background */
-            color: rgb(0, 0, 0);
-            transition: background-color 0.3s;
-        }
-        .buttonD {
-            flex: 2 0 50%; /* Takes up half the width and full height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            border: none;
-            background-color: #00ff08; /* Green background */
-            color: white;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #000000; /* Darker green on hover */
-        }
-        .top-left {
-            border-radius: 0 0 0 0;
-        }
-        .top-right {
-            border-radius: 0 0 0 0;
-        }
-        .bottom-left {
-            border-radius: 0 0 0 0;
-        }
-        .bottom-right {
-            border-radius: 0 0 0 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Soundboard </title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+    }
+    .buttonA {
+      flex: 1 0 50%;  /* Takes up half the width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background-color: #ff0000; /* Red background */
+      color: white;
+      transition: background-color 0.3s;
+      /* New styles for positioning */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;  /* Adjust width as needed */
+      height: 50%;  /* Adjust width as needed */
+    }
+    .buttonB {
+      flex: 1 0 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background-color: #0015ff; /* Red background */
+      color: white;
+      transition: background-color 0.3s;
+      /* New styles for positioning */
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;  /* Adjust width as needed */
+      height: 50%;  /* Adjust width as needed */
+    }
+    .buttonC {
+      flex: 1 0 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background-color: #fbff00; /* Red background */
+      color: rgb(0, 0, 0);
+      transition: background-color 0.3s;
+      /* New styles for positioning */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;  /* Adjust width as needed */
+      height: 50%;  /* Adjust width as needed */
+    }
+    .buttonD {
+      flex: 1 0 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background-color: #11ff00; /* Red background */
+      color: white;
+      transition: background-color 0.3s;
+      /* New styles for positioning */
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;  /* Adjust width as needed */
+      height: 50%;  /* Adjust width as needed */
+    }
+    .button:hover {
+      background-color: #000000;
+    }
+  </style>
 </head>
 <body>
-    <button class="buttonA top-left" id="soundButton1">Slurp</button>
-    <button class="buttonB top-right" id="soundButton2">Snort (sounds like a bomb)</button>
-    <button class="buttonC bottom-left" id="soundButton3">Kermit MF</button>
-    <button class="buttonD bottom-right" id="soundButton4">On God?!</button>
+  <button class="buttonA" id="soundButton1">Slurp</button>
+  <button class="buttonB" id="soundButton2">Snort (sounds like a bomb)</button>
+  <button class="buttonC" id="soundButton3">Kermit MF</button>
+  <button class="buttonD" id="soundButton4">On God?!</button>
 
-    <audio id="soundEffect1" src="audio/slurp.mp3"></audio>
-    <audio id="soundEffect2" src="audio/notanuke.mp3"></audio>
-    <audio id="soundEffect3" src="audio/kermitmf.mp3"></audio>
-    <audio id="soundEffect4" src="audio/ongod.mp3"></audio>
+  <audio id="soundEffect1" src="audio/slurp.mp3"></audio>
+  <audio id="soundEffect2" src="audio/notanuke.mp3"></audio>
+  <audio id="soundEffect3" src="audio/kermitmf.mp3"></audio>
+  <audio id="soundEffect4" src="audio/ongod.mp3"></audio>
 
-    <script>
-        function setupButton(buttonId, soundId) {
-            document.getElementById(buttonId).addEventListener('click', function() {
-                const sound = document.getElementById(soundId);
-                sound.currentTime = 0; // Reset to start
-                sound.play();
-            });
-        }
+  <script>
+    function setupButton(buttonId, soundId) {
+      document.getElementById(buttonId).addEventListener('click', function() {
+        const sound = document.getElementById(soundId);
+        sound.currentTime = 0; // Reset to start
+        sound.play();
+      });
+    }
 
-        setupButton('soundButton1', 'soundEffect1');
-        setupButton('soundButton2', 'soundEffect2');
-        setupButton('soundButton3', 'soundEffect3');
-        setupButton('soundButton4', 'soundEffect4');
-    </script>
+    setupButton('soundButton1', 'soundEffect1');
+    setupButton('soundButton2', 'soundEffect2');
+    setupButton('soundButton3', 'soundEffect3');
+    setupButton('soundButton4', 'soundEffect4');
+  </script>
 </body>
 </html>
