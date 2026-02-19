@@ -91,6 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Kazuya", "Mishima Dojo");
     home_stage_map.set("Sora", "Hollow Bastion");
 
+    const resetter = document.getElementById("reset");
+    function resetslots(){
+        // 1. Clear all LocalStorage data
+        localStorage.clear();
+
+        // 2. Loop through every fighter and reset their image to the default
+        document.querySelectorAll(".fighter").forEach(img => {
+            // Since we are using data-src to store the original path:
+            img.src = img.getAttribute("data-src");
+        });
+
+        // 3. Optional: Alert the user
+        console.log("All saved data has been erased and images reset.");
+    }
+    resetter.addEventListener("click", resetslots);
+    
     // 1. INITIALIZE: Check owners on page load
     function initializeImages() {
         document.querySelectorAll(".fighter").forEach(img => {
