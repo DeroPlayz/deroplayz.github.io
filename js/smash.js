@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Pyra & Mythra", "Cloud Sea of Alrest");
     home_stage_map.set("Kazuya", "Mishima Dojo");
     home_stage_map.set("Sora", "Hollow Bastion");
+    home_stage_map.set("Mii Brawler", "Pictochat 2");
+    home_stage_map.set("Mii Swordfighter", "Wuhu Island");
+    home_stage_map.set("Mii Gunner", "Find Mii");
 
     const resetter = document.getElementById("reset");
     function resetslots(){
