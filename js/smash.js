@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Captain Falcon", "Big Blue");
     home_stage_map.set("Jigglypuff", "Pokemon Stadium");
     home_stage_map.set("Peach", "Princess Peach's Castle");
-    home_stage_map.set("Daisy", "Mario Circuit");
+    home_stage_map.set("Daisy", "Figure-8 Circuit");
     home_stage_map.set("Bowser", "Mushroomy Kingdom");
     home_stage_map.set("Ice Climbers", "Summit");
     home_stage_map.set("Sheik", "Hyrule Castle");
