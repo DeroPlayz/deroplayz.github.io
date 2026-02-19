@@ -1,26 +1,46 @@
-body{
-  background-color: brown;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
+/* smash.css - Presentation */
+body {
+    background-color: brown;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
 }
 
-h1{
-  color: chocolate;
+h1 { color: chocolate; }
+
+a, h4 {
+    text-align: left;
+    text-decoration: underline;
+    color: black;
 }
 
-a{
-  text-align: left;
-  text-decoration: underline;
-  color: black;
+img {
+    font-size: 24px;
+    vertical-align: middle;
+    padding: 0px;
 }
 
-h4{
-  text-align: left;
-  text-decoration: underline;
-  color: black;
+img.fighter { cursor: pointer; padding: 5px}
+#random {padding: 0px;}
+img.newline {
+    display: block;
+    border: 0px;
 }
 
-.music{
-  color: white;
-  text-align: left;
+.hide { display: none; }
+
+.show {
+    position: absolute; 
+    z-index: 1000;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#slot01 {
+    display: block;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
 }

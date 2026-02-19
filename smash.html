@@ -1,47 +1,211 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Smash Interactor</title>
-        <body bgcolor="rgb(139,69,19)">
-        <link rel="icon" href="img/ico/ssb.ico"/>
-        <link href="css/smash.css" rel="stylesheet">
-    </head>
-    <body>
-      <!-- <img src="img/smash/.png" alt="" width="140" height="130"> -->
-    
-      <audio autoplay>
-      <source src="audio/masterordersticketselect.mp3" type="audio/mpeg">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Smash Interactor</title>
+    <link rel="icon" href="img/ico/ssb.ico"/>
+    <link rel="stylesheet" href="css/smash.css">
+    <script src="js/smash.js" defer></script>
+</head>
+<body>
+    <audio autoplay>
+        <source src="audio/masterordersticketselect.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
+    </audio>
 
-      <h4><a id="" href="index.html">Back</h4></a>
-      <h1>Smash Brothers Interactive Tool</h3><br>
-      <img src="img/smash/mario.png" alt="" width="140" height="130">
-      <img src="img/smash/dk.png" alt="" width="140" height="130">
-      <img src="img/smash/link.png" alt="" width="140" height="130">
-      <img src="img/smash/samus.png" alt="" width="140" height="130">
-      <img src="img/smash/darksamus.png" alt="" width="140" height="130">
-      <img src="img/smash/yoshi.png" alt="" width="140" height="130">
-      <img src="img/smash/kirby.png" alt="" width="110" height="130">
-      <img src="img/smash/fox.png" alt="" width="140" height="130">
+    <div id="custom-menu" class="hide">
+        <h3 id="menu-title" style="color:black; margin:5px;">Character</h3>
+        <p style="margin: 5px; color: black;">
+        <select id="slot01">
+          <option value="Mario">Mario</option>
+          <option value="Donkey Kong">Donkey Kong</option>
+          <option value="Link">Link</option>
+          <option value="Samus">Samus</option>
+          <option value="Dark Samus">Dark Samus</option>
+          <option value="Yoshi">Yoshi</option>
+          <option value="Kirby">Kirby</option>
+          <option value="Fox">Fox</option>
+          <option value="Pikachu">Pikachu</option>
+          <option value="Luigi">Luigi</option>
+          <option value="Ness">Ness</option>
+          <option value="Captain Falcon">Captain Falcon</option>
+          <option value="Jigglypuff">Jigglypuff</option>
+          <option value="Peach">Peach</option>
+          <option value="Daisy">Daisy</option>
+          <option value="Bowser">Bowser</option>
+          <option value="Ice Climbers">Ice Climbers</option>
+          <option value="Sheik">Sheik</option>
+          <option value="Zelda">Zelda</option>
+          <option value="Dr. Mario">Dr. Mario</option>
+          <option value="Pichu">Pichu</option>
+          <option value="Falco">Falco</option>
+          <option value="Marth">Marth</option>
+          <option value="Lucina">Lucina</option>
+          <option value="Young link">Young link</option>
+          <option value="Ganondorf">Ganondorf</option>
+          <option value="Mewtwo">Mewtwo</option>
+          <option value="Roy">Roy</option>
+          <option value="Chrom">Chrom</option>
+          <option value="Mr. Game and Watch">Mr. Game and Watch</option>
+          <option value="Meta Knight">Meta Knight</option>
+          <option value="Pit">Pit</option>
+          <option value="Dark Pit">Dark Pit</option>
+          <option value="Zero Suit Samus">Zero Suit Samus</option>
+          <option value="Wario">Wario</option>
+          <option value="Snake">Snake</option>
+          <option value="Ike">Ike</option>
+          <option value="Pokemon Trainer">Pokemon Trainer</option>
+          <option value="Diddy Kong">Diddy Kong</option>
+          <option value="Lucas">Lucas</option>
+          <option value="Sonic">Sonic</option>
+          <option value="King Dedede">King Dedede</option>
+          <option value="Olimar">Olimar</option>
+          <option value="Lucario">Lucario</option>
+          <option value="R.O.B.">R.O.B.</option>
+          <option value="Toon Link">Toon Link</option>
+          <option value="Wolf">Wolf</option>
+          <option value="Villager">Villager</option>
+          <option value="Mega Man">Mega Man</option>
+          <option value="Wii Fit Trainer">Wii Fit Trainer</option>
+          <option value="Rosalina and Luma">Rosalina and Luma</option>
+          <option value="Little Mac">Little Mac</option>
+          <option value="Greninja">Greninja</option>
+          <option value="Palutena">Palutena</option>
+          <option value="PAC-Man">PAC-Man</option>
+          <option value="Robin">Robin</option>
+          <option value="Shulk">Shulk</option>
+          <option value="Bowser Jr.">Bowser Jr.</option>
+          <option value="Duck Hunt">Duck Hunt</option>
+          <option value="Ryu">Ryu</option>
+          <option value="Ken">Ken</option>
+          <option value="Cloud">Cloud</option>
+          <option value="Corrin">Corrin</option>
+          <option value="Bayonetta">Bayonetta</option>
+          <option value="Inkling">Inkling</option>
+          <option value="Ridley">Ridley</option>
+          <option value="Simon">Simon</option>
+          <option value="Richter">Richter</option>
+          <option value="King K. Rool">King K. Rool</option>
+          <option value="Isabelle">Isabelle</option>
+          <option value="Incineroar">Incineroar</option>
+          <option value="Piranha Plant">Piranha Plant</option>
+          <option value="Joker">Joker</option>
+          <option value="Hero">Hero</option>
+          <option value="Banjo and Kazooie">Banjo and Kazooie</option>
+          <option value="Terry">Terry</option>
+          <option value="Byleth">Byleth</option>
+          <option value="Min Min">Min Min</option>
+          <option value="Steve">Steve</option>
+          <option value="Sephiroth">Sephiroth</option>
+          <option value="Pyra">Pyra</option>
+          <option value="Kazuya">Kazuya</option>
+          <option value="Sora">Sora</option>
+          <option value="Mii Brawler">Mii Brawler</option>
+          <option value="Mii Swordfighter">Mii Swordighter</option>
+          <option value="Mii Gunner">Mii Gunner</option>
+          <option value="Random">Random</option>
+        </select>
+        </p>
+        <p id="home_stage">Stage</p>
+    </div>
 
-      <img src="img/smash/pikachu.png" alt="" width="140" height="130">
-      <img src="img/smash/luigi.png" alt="" width="140" height="130">
-      <img src="img/smash/ness.png" alt="" width="140" height="130">
-      <img src="img/smash/captainfalcon.png" alt="" width="140" height="130">
-      <img src="img/smash/jigglypuff.png" alt="" width="140" height="130">
-      <img src="img/smash/peach.png" alt="" width="140" height="130">
-        <img src="img/smash/daisy.png" alt="" width="110" height="130">
-      <img src="img/smash/bowser.png" alt="" width="140" height="130">
-      <img src="img/smash/iceclimbers.png" alt="" width="140" height="130">
-      <img src="img/smash/sheik.png" alt="" width="140" height="130">
-      <img src="img/smash/zelda.png" alt="" width="140" height="130">
-      <img src="img/smash/drmario.png" alt="" width="140" height="130">
-      <img src="img/smash/pichu.png" alt="" width="140" height="130">
-      <img src="img/smash/falco.png" alt="" width="140" height="130">
-      <img src="img/smash/marth.png" alt="" width="110" height="130">
-      <img src="img/smash/lucina.png" alt="" width="140" height="130">
+    <h4><a href="index.html">Back</a></h4>
+    <h1>Smash Brothers Interactive Tool</h1>
+    <br>
 
-    </body>
+    <img class="fighter" data-src="img/smash/render/Mario.png" alt="Mario" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Donkey Kong.png" alt="Donkey Kong" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Link.png" alt="Link" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Samus.png" alt="Samus" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Dark Samus.png" alt="Dark Samus" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Yoshi.png" alt="Yoshi" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Kirby.png" alt="Kirby" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Fox.png" alt="Fox" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Pikachu.png" alt="Pikachu" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Luigi.png" alt="Luigi" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Ness.png" alt="Ness" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Captain Falcon.png" alt="Captain Falcon" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Jigglypuff.png" alt="Jigglypuff" width="auto" height="110">
+    <img class="newline">
+    <img class="fighter" data-src="img/smash/render/Peach.png" alt="Peach" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Daisy.png" alt="Daisy" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Bowser.png" alt="Bowser" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Ice Climbers.png" alt="Ice Climbers" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Sheik.png" alt="Sheik" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Zelda.png" alt="Zelda" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Dr. Mario.png" alt="Dr. Mario" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Pichu.png" alt="Pichu" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Falco.png" alt="Falco" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Marth.png" alt="Marth" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Lucina.png" alt="Lucina" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Young link.png" alt="Young Link" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Ganondorf.png" alt="Ganondorf" width="auto" height="110">
+    <img class="newline">
+    <img class="fighter" data-src="img/smash/render/Mewtwo.png" alt="Mewtwo" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Roy.png" alt="Roy" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Chrom.png" alt="Chrom" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Mr. Game and Watch.png" alt="Mr. Game & Watch" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Meta Knight.png" alt="Meta Knight" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Pit.png" alt="Pit" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Dark Pit.png" alt="Dark Pit" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Zero Suit Samus.png" alt="Zero Suit Samus" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Wario.png" alt="Wario" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Snake.png" alt="Snake" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Ike.png" alt="Ike" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Pokemon Trainer.png" alt="Pokemon Trainer" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Diddy Kong.png" alt="Diddy Kong" width="auto" height="110">
+    <img class="newline">
+    <img class="fighter" data-src="img/smash/render/Lucas.png" alt="Lucas" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Sonic.png" alt="Sonic" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/King Dedede.png" alt="King Dedede" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Olimar.png" alt="Olimar" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Lucario.png" alt="Lucario" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/R.O.B..png" alt="R.O.B." width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Toon Link.png" alt="Toon Link" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Wolf.png" alt="Wolf" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Villager.png" alt="Villager" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Mega Man.png" alt="Mega Man" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Wii Fit Trainer.png" alt="Wii Fit Trainer" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Rosalina and Luma.png" alt="Rosalina & Luma" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Little Mac.png" alt="Little Mac" width="auto" height="110">
+    <img class="newline">
+    <img class="fighter" data-src="img/smash/render/Greninja.png" alt="Greninja" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Palutena.png" alt="Palutena" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/PAC-Man.png" alt="PAC-Man" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Robin.png" alt="Robin" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Shulk.png" alt="Shulk" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Bowser Jr..png" alt="Bowser Jr." width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Duck Hunt.png" alt="Duck Hunt" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Ryu.png" alt="Ryu" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Ken.png" alt="Ken" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Cloud.png" alt="Cloud" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Corrin.png" alt="Corrin" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Bayonetta.png" alt="Bayonetta" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Inkling.png" alt="Inkling" width="auto" height="110">
+    <img class="newline">
+    <img class="fighter" data-src="img/smash/render/Ridley.png" alt="Ridley" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Simon.png" alt="Simon" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Richter.png" alt="Richter" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/King K. Rool.png" alt="King K. Rool" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Isabelle.png" alt="Isabelle" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Incineroar.png" alt="Incineroar" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Piranha Plant.png" alt="Piranha Plant" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Joker.png" alt="Joker" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Hero.png" alt="Hero" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Banjo and Kazooie.png" alt="Banjo & Kazooie" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Terry.png" alt="Terry" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Byleth.png" alt="Byleth" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Min Min.png" alt="Min Min" width="auto" height="110">
+    <img class="newline">
+    <img class="fighter" data-src="img/smash/render/Steve.png" alt="Steve" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Sephiroth.png" alt="Sephiroth" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Pyra.png" alt="Pyra/Mythra" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Kazuya.png" alt="Kazuya" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Sora.png" alt="Sora" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Mii Brawler.png" alt="Mii Brawler" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Mii Swordfighter.png" alt="Mii Swordfighter" width="auto" height="110">
+    <img class="fighter" data-src="img/smash/render/Mii Gunner.png" alt="Mii Gunner" width="auto" height="110">
+    <img class="fighter" id="random" data-src="img/smash/render/Random.png" alt="Random" width="auto" height="100">
+
+</body>
 </html>
