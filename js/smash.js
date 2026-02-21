@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeImage = null; 
 
     const home_stage_map = new Map();
-    home_stage_map.set("Mario", "New Donk City");
+    home_stage_map.set("Mario", "???");
     home_stage_map.set("Donkey Kong", "Kongo Jungle");
     home_stage_map.set("Link", "Great Plateau Tower");
     home_stage_map.set("Samus", "Brinstar");
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Jigglypuff", "Pokemon Stadium");
     home_stage_map.set("Peach", "Princess Peach's Castle");
     home_stage_map.set("Daisy", "Figure-8 Circuit");
-    home_stage_map.set("Bowser", "Mushroomy Kingdom");
+    home_stage_map.set("Bowser", "Mushroom Kingdom U");
     home_stage_map.set("Ice Climbers", "Summit");
     home_stage_map.set("Sheik", "Hyrule Castle");
     home_stage_map.set("Zelda", "Hyrule Castle");
@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Falco", "Lylat Cruise");
     home_stage_map.set("Marth", "Temple");
     home_stage_map.set("Lucina", "Arena Ferox");
-    home_stage_map.set("Young Link", "Hyrule Castle");
+    home_stage_map.set("Young Link", "Great Bay");
     home_stage_map.set("Ganondorf", "Hyrule Castle");
-    home_stage_map.set("Mewtwo", "Final Destination");
+    home_stage_map.set("Mewtwo", "???");
     home_stage_map.set("Roy", "Temple");
     home_stage_map.set("Chrom", "Arena Ferox");
     home_stage_map.set("Mr. Game & Watch", "Flat Zone X");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("King Dedede", "Dream Land");
     home_stage_map.set("Olimar", "Distant Planet");
     home_stage_map.set("Lucario", "Spear Pillar");
-    home_stage_map.set("R.O.B.", "Flat Zone X");
+    home_stage_map.set("R.O.B.", "Wrecking Crew");
     home_stage_map.set("Toon Link", "Pirate Ship");
     home_stage_map.set("Wolf", "Venom");
     home_stage_map.set("Villager", "Smashville");
@@ -90,9 +90,19 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Pyra & Mythra", "Cloud Sea of Alrest");
     home_stage_map.set("Kazuya", "Mishima Dojo");
     home_stage_map.set("Sora", "Hollow Bastion");
-    home_stage_map.set("Mii Brawler", "Pictochat 2");
-    home_stage_map.set("Mii Swordfighter", "Wuhu Island");
-    home_stage_map.set("Mii Gunner", "Find Mii");
+    home_stage_map.set("Random", "Random");
+
+    /* 
+     * Get Fighter Upper Left = -14
+     * Get Fighter Above = -13
+     * Get Fighter Upper Right = -12
+     * Get Fighter Left = -1
+     * Get Fighter Right = +1
+     * Get Fighter Lower Left = +12
+     * Get Fighter Below = +13
+     * Get Fighter Lower Right = +14
+     * If there is no fighter at given index, try again.
+     */
 
     const resetter = document.getElementById("reset");
     function resetslots(){
