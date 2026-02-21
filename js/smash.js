@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const customMenu = document.getElementById("custom-menu");
     const menuTitle = document.getElementById("menu-title");
-    const slot01 = document.getElementById("slot01"); // Our <select> dropdown
+    const slot = document.getElementById("slot"); // Our <select> dropdown
     const home_stage = document.getElementById("home_stage");
     let activeImage = null; 
 
@@ -148,12 +148,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (savedData) {
             // If we have a saved owner, select it in the dropdown
-            slot01.value = savedData;
-            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot01.value)
+            slot.value = savedData;
+            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
         } else {
             // IF NOTHING IS SAVED: Default the dropdown to the clicked character's name
-            slot01.value = activeImage.alt;
-            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot01.value)
+            slot.value = activeImage.alt;
+            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
         }
 
         // Position and show the menu
@@ -169,9 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 3. CHANGE LOGIC: Update image and save when dropdown changes
-    slot01.addEventListener("change", () => {
+    slot.addEventListener("change", () => {
         if (activeImage) {
-            const selectedOwner = slot01.value;
+            const selectedOwner = slot.value;
 
             // Save the selection to LocalStorage
             localStorage.setItem("notes_" + activeImage.alt, selectedOwner);
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update the image src on the page
             activeImage.src = "img/smash/render/" + selectedOwner + ".png";
             
-            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot01.value)
+            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
         }
     });
 
