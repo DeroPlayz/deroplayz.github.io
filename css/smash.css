@@ -1,6 +1,9 @@
 /* smash.css - Presentation */
 body {
-    background-color: brown;
+    background-image: url("../img/smash/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
@@ -27,7 +30,7 @@ img.newline {
     border: 0px;
 }
 #random {padding: 0px;}
-#reset {color:aquamarine; background-color: red; width: 150px; height: 75px}
+#reset {color:red; background-color: black; width: 150px; height: 75px; font-size: 18px}
 .hide { display: none; }
 
 .show {
