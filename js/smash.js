@@ -4,14 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuTitle = document.getElementById("menu-title");
     const slot = document.getElementById("slot"); // Our <select> dropdown
     const home_stage = document.getElementById("home_stage");
-    const upper_left = document.getElementById("upper_left");
+    
+    const index_number = document.getElementById("index_number");
     const above = document.getElementById("above");
-    const upper_right = document.getElementById("upper_right");
+    const below = document.getElementById("below");
     const left = document.getElementById("left");
     const right = document.getElementById("right");
+    const upper_left = document.getElementById("upper_left");
     const lower_left = document.getElementById("lower_left");
-    const below = document.getElementById("below");
+    const upper_right = document.getElementById("upper_right");
     const lower_right = document.getElementById("lower_right");
+    
     let activeImage = null; 
 
     const fighters_index = new Map();
@@ -95,10 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fighters_index.set("Min Min", "78");
     fighters_index.set("Steve", "79");
     fighters_index.set("Sephiroth", "80");
-    fighters_index.set("Pyra & Mythra", "81");
+    fighters_index.set("Pyra/Mythra", "81");
     fighters_index.set("Kazuya", "82");
     fighters_index.set("Sora", "83");
-    fighters_index.set("Random", "84");
+    fighters_index.set("Mii Brawler", "84");
+    fighters_index.set("Mii Swordfighter", "85");
+    fighters_index.set("Mii Gunner", "86");
+    fighters_index.set("Random", "87");
     fighters_index.set(1, "Mario");
     fighters_index.set(2, "Donkey Kong");
     fighters_index.set(3, "Link");
@@ -179,10 +185,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fighters_index.set(78, "Min Min");
     fighters_index.set(79, "Steve");
     fighters_index.set(80, "Sephiroth");
-    fighters_index.set(81, "Pyra & Mythra");
+    fighters_index.set(81, "Pyra/Mythra");
     fighters_index.set(82, "Kazuya");
     fighters_index.set(83, "Sora");
-    fighters_index.set(84, "Random");
+    fighters_index.set(84, "Mii Brawler");
+    fighters_index.set(85, "Mii Swordfighter");
+    fighters_index.set(86, "Mii Gunner");
+    fighters_index.set(87, "Random");
     const home_stage_map = new Map();
     home_stage_map.set("Mario", "???");
     home_stage_map.set("Donkey Kong", "Kongo Jungle");
@@ -264,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Min Min", "Spring Stadium");
     home_stage_map.set("Steve", "Minecraft World");
     home_stage_map.set("Sephiroth", "Northern Cave");
-    home_stage_map.set("Pyra & Mythra", "Cloud Sea of Alrest");
+    home_stage_map.set("Pyra/Mythra", "Cloud Sea of Alrest");
     home_stage_map.set("Kazuya", "Mishima Dojo");
     home_stage_map.set("Sora", "Hollow Bastion");
     home_stage_map.set("Random", "Random");
@@ -306,7 +315,6 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation();
 
         activeImage = e.currentTarget;
-        // menuTitle.innerText = activeImage.alt;
 
         /* 
          * Get Fighter Upper Left = -14
@@ -319,26 +327,37 @@ document.addEventListener("DOMContentLoaded", () => {
          * Get Fighter Lower Right = +14
          * If there is no fighter at given index, try again.
          */
-        const val = parseInt(fighters_index.get(activeImage.alt));
-        // above.innerText =
-        upper_left.innerText = "Upper Left: " + fighters_index.get(val - 14)
-        above.innerText = "Above: " + fighters_index.get(val - 13)
-        upper_right.innerText = "Upper Right: " + fighters_index.get(val - 12)
-        left.innerText = "Left: " + fighters_index.get(val - 1)
-        if(val % 14 == 0){left.innerText = "Left: N/A"}
-        right.innerText = "Right: " + fighters_index.get(val + 1)
-        if(val % 13 == 0){left.innerText = "Right: N/A"}
-        lower_left.innerText = "Lower Left: " + fighters_index.get(val + 12)
-        below.innerText = "Below: " + fighters_index.get(val + 13)
-        lower_right.innerText = "Lower Right: " + fighters_index.get(val + 14)
-        lower_left.innerText.replace("undefined", "N/A");
+
+        // const val = parseInt(fighters_index.get(activeImage.alt));
+        // let vert_mod = 13;
+        // if(val > 78){vert_mod = 11}
+        // index_number.innerText = "Index #: " + val;
+        // above.innerText = "Above: " + fighters_index.get(val - vert_mod);
+        // below.innerText = "Below: " + fighters_index.get(val + vert_mod);
+        // left.innerText = "Left: " + fighters_index.get(val - 1);
+        // upper_left.innerText = "Upper Left: " + fighters_index.get(val - vert_mod - 1);
+        // lower_left.innerText = "Lower Left: " + fighters_index.get(val + vert_mod - 1);
+        // right.innerText = "Right: " + fighters_index.get(val + 1);
+        // upper_right.innerText = "Upper Right: " + fighters_index.get(val - vert_mod + 1);
+        // lower_right.innerText = "Lower Right: " + fighters_index.get(val + vert_mod + 1);
+        // if(val % 13 == 0){right.innerText = "Right: undefined"; upper_right.innerText = "Upper Right: undefined"; lower_right.innerText = "Lower Right: undefined"}
+        // if((val - 1) % 13 == 0){left.innerText = "Left: undefined"; upper_left.innerText = "Upper Left: undefined"; lower_left.innerText = "Lower Left: undefined"}
+        // above.innerText = above.innerText.replace("undefined", "None");
+        // below.innerText = below.innerText.replace("undefined", "None");
+        // left.innerText = left.innerText.replace("undefined", "None");
+        // upper_left.innerText = upper_left.innerText.replace("undefined", "None");
+        // lower_left.innerText = lower_left.innerText.replace("undefined", "None");
+        // right.innerText = right.innerText.replace("undefined", "None");
+        // upper_right.innerText = upper_right.innerText.replace("undefined", "None");
+        // lower_right.innerText = lower_right.innerText.replace("undefined", "None");
+
         // Load saved data for this specific character
         const savedData = localStorage.getItem("notes_" + activeImage.alt);
 
         if (savedData) {
             // If we have a saved owner, select it in the dropdown
             slot.value = savedData;
-            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
+            // home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
         } else {
             // IF NOTHING IS SAVED: Default the dropdown to the clicked character's name
             slot.value = activeImage.alt;
@@ -368,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update the image src on the page
             activeImage.src = "img/smash/render/" + selectedOwner + ".png";
             
-            home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
+            // home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
         }
     });
 

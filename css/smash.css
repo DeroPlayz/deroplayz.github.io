@@ -27,7 +27,7 @@ img.newline {
     border: 0px;
 }
 #random {padding: 0px;}
-
+#reset {color:aquamarine; background-color: red; width: 150px; height: 75px}
 .hide { display: none; }
 
 .show {
