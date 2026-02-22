@@ -11,10 +11,23 @@ body {
 
 h1 { color: chocolate; }
 
-a, h4 {
-    text-align: left;
-    text-decoration: underline;
+#back, a{
+    position: relative;
+    text-align: center;
+    text-decoration: none;
     color: black;
+    background-color: white;
+    font-size: 24px;
+    margin-top: 10px;
+}
+#reset {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    background-color: black;
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 img {
@@ -22,17 +35,14 @@ img {
     vertical-align: middle;
     padding: 0px;
 }
-
 img.fighter { cursor: pointer; padding: 5px}
-
 img.newline {
     display: block;
     border: 0px;
 }
 #random {padding: 0px;}
-#reset {color:red; background-color: black; width: 150px; height: 75px; font-size: 18px}
-.hide { display: none; }
 
+.hide { display: none; }
 .show {
     position: absolute; 
     z-index: 1000;
