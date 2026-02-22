@@ -4,8 +4,185 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuTitle = document.getElementById("menu-title");
     const slot = document.getElementById("slot"); // Our <select> dropdown
     const home_stage = document.getElementById("home_stage");
+    const upper_left = document.getElementById("upper_left");
+    const above = document.getElementById("above");
+    const upper_right = document.getElementById("upper_right");
+    const left = document.getElementById("left");
+    const right = document.getElementById("right");
+    const lower_left = document.getElementById("lower_left");
+    const below = document.getElementById("below");
+    const lower_right = document.getElementById("lower_right");
     let activeImage = null; 
 
+    const fighters_index = new Map();
+    fighters_index.set("Mario", "1");
+    fighters_index.set("Donkey Kong", "2");
+    fighters_index.set("Link", "3");
+    fighters_index.set("Samus", "4");
+    fighters_index.set("Dark Samus", "5");
+    fighters_index.set("Yoshi", "6");
+    fighters_index.set("Kirby", "7");
+    fighters_index.set("Fox", "8");
+    fighters_index.set("Pikachu", "9");
+    fighters_index.set("Luigi", "10");
+    fighters_index.set("Ness", "11");
+    fighters_index.set("Captain Falcon", "12");
+    fighters_index.set("Jigglypuff", "13");
+    fighters_index.set("Peach", "14");
+    fighters_index.set("Daisy", "15");
+    fighters_index.set("Bowser", "16");
+    fighters_index.set("Ice Climbers", "17");
+    fighters_index.set("Sheik", "18");
+    fighters_index.set("Zelda", "19");
+    fighters_index.set("Dr. Mario", "20");
+    fighters_index.set("Pichu", "21");
+    fighters_index.set("Falco", "22");
+    fighters_index.set("Marth", "23");
+    fighters_index.set("Lucina", "24");
+    fighters_index.set("Young Link", "25");
+    fighters_index.set("Ganondorf", "26");
+    fighters_index.set("Mewtwo", "27");
+    fighters_index.set("Roy", "28");
+    fighters_index.set("Chrom", "29");
+    fighters_index.set("Mr. Game & Watch", "30");
+    fighters_index.set("Meta Knight", "31");
+    fighters_index.set("Pit", "32");
+    fighters_index.set("Dark Pit", "33");
+    fighters_index.set("Zero Suit Samus", "34");
+    fighters_index.set("Wario", "35");
+    fighters_index.set("Snake", "36");
+    fighters_index.set("Ike", "37");
+    fighters_index.set("Pokemon Trainer", "38");
+    fighters_index.set("Diddy Kong", "39");
+    fighters_index.set("Lucas", "40");
+    fighters_index.set("Sonic", "41");
+    fighters_index.set("King Dedede", "42");
+    fighters_index.set("Olimar", "43");
+    fighters_index.set("Lucario", "44");
+    fighters_index.set("R.O.B.", "45");
+    fighters_index.set("Toon Link", "46");
+    fighters_index.set("Wolf", "47");
+    fighters_index.set("Villager", "48");
+    fighters_index.set("Mega Man", "49");
+    fighters_index.set("Wii Fit Trainer", "50");
+    fighters_index.set("Rosalina and Luma", "51");
+    fighters_index.set("Little Mac", "52");
+    fighters_index.set("Greninja", "53");
+    fighters_index.set("Palutena", "54");
+    fighters_index.set("PAC-Man", "55");
+    fighters_index.set("Robin", "56");
+    fighters_index.set("Shulk", "57");
+    fighters_index.set("Bowser Jr.", "58");
+    fighters_index.set("Duck Hunt", "59");
+    fighters_index.set("Ryu", "60");
+    fighters_index.set("Ken", "61");
+    fighters_index.set("Cloud", "62");
+    fighters_index.set("Corrin", "63");
+    fighters_index.set("Bayonetta", "64");
+    fighters_index.set("Inkling", "65");
+    fighters_index.set("Ridley", "66");
+    fighters_index.set("Simon", "67");
+    fighters_index.set("Richter", "68");
+    fighters_index.set("King K. Rool", "69");
+    fighters_index.set("Isabelle", "70");
+    fighters_index.set("Incineroar", "71");
+    fighters_index.set("Piranha Plant", "72");
+    fighters_index.set("Joker", "73");
+    fighters_index.set("Hero", "74");
+    fighters_index.set("Banjo & Kazooie", "75");
+    fighters_index.set("Terry", "76");
+    fighters_index.set("Byleth", "77");
+    fighters_index.set("Min Min", "78");
+    fighters_index.set("Steve", "79");
+    fighters_index.set("Sephiroth", "80");
+    fighters_index.set("Pyra & Mythra", "81");
+    fighters_index.set("Kazuya", "82");
+    fighters_index.set("Sora", "83");
+    fighters_index.set("Random", "84");
+    fighters_index.set(1, "Mario");
+    fighters_index.set(2, "Donkey Kong");
+    fighters_index.set(3, "Link");
+    fighters_index.set(4, "Samus");
+    fighters_index.set(5, "Dark Samus");
+    fighters_index.set(6, "Yoshi");
+    fighters_index.set(7, "Kirby");
+    fighters_index.set(8, "Fox");
+    fighters_index.set(9, "Pikachu");
+    fighters_index.set(10, "Luigi");
+    fighters_index.set(11, "Ness");
+    fighters_index.set(12, "Captain Falcon");
+    fighters_index.set(13, "Jigglypuff");
+    fighters_index.set(14, "Peach");
+    fighters_index.set(15, "Daisy");
+    fighters_index.set(16, "Bowser");
+    fighters_index.set(17, "Ice Climbers");
+    fighters_index.set(18, "Sheik");
+    fighters_index.set(19, "Zelda");
+    fighters_index.set(20, "Dr. Mario");
+    fighters_index.set(21, "Pichu");
+    fighters_index.set(22, "Falco");
+    fighters_index.set(23, "Marth");
+    fighters_index.set(24, "Lucina");
+    fighters_index.set(25, "Young Link");
+    fighters_index.set(26, "Ganondorf");
+    fighters_index.set(27, "Mewtwo");
+    fighters_index.set(28, "Roy");
+    fighters_index.set(29, "Chrom");
+    fighters_index.set(30, "Mr. Game & Watch");
+    fighters_index.set(31, "Meta Knight");
+    fighters_index.set(32, "Pit");
+    fighters_index.set(33, "Dark Pit");
+    fighters_index.set(34, "Zero Suit Samus");
+    fighters_index.set(35, "Wario");
+    fighters_index.set(36, "Snake");
+    fighters_index.set(37, "Ike");
+    fighters_index.set(38, "Pokemon Trainer");
+    fighters_index.set(39, "Diddy Kong");
+    fighters_index.set(40, "Lucas");
+    fighters_index.set(41, "Sonic");
+    fighters_index.set(42, "King Dedede");
+    fighters_index.set(43, "Olimar");
+    fighters_index.set(44, "Lucario");
+    fighters_index.set(45, "R.O.B.");
+    fighters_index.set(46, "Toon Link");
+    fighters_index.set(47, "Wolf");
+    fighters_index.set(48, "Villager");
+    fighters_index.set(49, "Mega Man");
+    fighters_index.set(50, "Wii Fit Trainer");
+    fighters_index.set(51, "Rosalina and Luma");
+    fighters_index.set(52, "Little Mac");
+    fighters_index.set(53, "Greninja");
+    fighters_index.set(54, "Palutena");
+    fighters_index.set(55, "PAC-Man");
+    fighters_index.set(56, "Robin");
+    fighters_index.set(57, "Shulk");
+    fighters_index.set(58, "Bowser Jr.");
+    fighters_index.set(59, "Duck Hunt");
+    fighters_index.set(60, "Ryu");
+    fighters_index.set(61, "Ken");
+    fighters_index.set(62, "Cloud");
+    fighters_index.set(63, "Corrin");
+    fighters_index.set(64, "Bayonetta");
+    fighters_index.set(65, "Inkling");
+    fighters_index.set(66, "Ridley");
+    fighters_index.set(67, "Simon");
+    fighters_index.set(68, "Richter");
+    fighters_index.set(69, "King K. Rool");
+    fighters_index.set(70, "Isabelle");
+    fighters_index.set(71, "Incineroar");
+    fighters_index.set(72, "Piranha Plant");
+    fighters_index.set(73, "Joker");
+    fighters_index.set(74, "Hero");
+    fighters_index.set(75, "Banjo & Kazooie");
+    fighters_index.set(76, "Terry");
+    fighters_index.set(77, "Byleth");
+    fighters_index.set(78, "Min Min");
+    fighters_index.set(79, "Steve");
+    fighters_index.set(80, "Sephiroth");
+    fighters_index.set(81, "Pyra & Mythra");
+    fighters_index.set(82, "Kazuya");
+    fighters_index.set(83, "Sora");
+    fighters_index.set(84, "Random");
     const home_stage_map = new Map();
     home_stage_map.set("Mario", "???");
     home_stage_map.set("Donkey Kong", "Kongo Jungle");
@@ -92,18 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
     home_stage_map.set("Sora", "Hollow Bastion");
     home_stage_map.set("Random", "Random");
 
-    /* 
-     * Get Fighter Upper Left = -14
-     * Get Fighter Above = -13
-     * Get Fighter Upper Right = -12
-     * Get Fighter Left = -1
-     * Get Fighter Right = +1
-     * Get Fighter Lower Left = +12
-     * Get Fighter Below = +13
-     * Get Fighter Lower Right = +14
-     * If there is no fighter at given index, try again.
-     */
-
     const resetter = document.getElementById("reset");
     function resetslots(){
         // 1. Clear all LocalStorage data
@@ -142,7 +307,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         activeImage = e.currentTarget;
         // menuTitle.innerText = activeImage.alt;
-        
+
+        /* 
+         * Get Fighter Upper Left = -14
+         * Get Fighter Above = -13
+         * Get Fighter Upper Right = -12
+         * Get Fighter Left = -1
+         * Get Fighter Right = +1
+         * Get Fighter Lower Left = +12
+         * Get Fighter Below = +13
+         * Get Fighter Lower Right = +14
+         * If there is no fighter at given index, try again.
+         */
+        const val = parseInt(fighters_index.get(activeImage.alt));
+        // above.innerText =
+        upper_left.innerText = "Upper Left: " + fighters_index.get(val - 14)
+        above.innerText = "Above: " + fighters_index.get(val - 13)
+        upper_right.innerText = "Upper Right: " + fighters_index.get(val - 12)
+        left.innerText = "Left: " + fighters_index.get(val - 1)
+        if(val % 14 == 0){left.innerText = "Left: N/A"}
+        right.innerText = "Right: " + fighters_index.get(val + 1)
+        if(val % 13 == 0){left.innerText = "Right: N/A"}
+        lower_left.innerText = "Lower Left: " + fighters_index.get(val + 12)
+        below.innerText = "Below: " + fighters_index.get(val + 13)
+        lower_right.innerText = "Lower Right: " + fighters_index.get(val + 14)
+        lower_left.innerText.replace("undefined", "N/A");
         // Load saved data for this specific character
         const savedData = localStorage.getItem("notes_" + activeImage.alt);
 
@@ -155,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slot.value = activeImage.alt;
             home_stage.innerText = "Home Stage: " + home_stage_map.get(slot.value)
         }
-
+        
         // Position and show the menu
         customMenu.style.top = `${e.pageY}px`;
         customMenu.style.left = `${e.pageX}px`;
