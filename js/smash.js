@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let activeImage = null; 
 
+    const random_arrow = document.getElementById("arrow");
+    random_arrow.style.display = "none";
+
     const fighters_index = new Map();
     fighters_index.set("Mario", "1");
     fighters_index.set("Donkey Kong", "2");
@@ -316,6 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         activeImage = e.currentTarget;
         
+
         /* 
          * Get Fighter Upper Left = -14
          * Get Fighter Above = -13
@@ -371,6 +375,15 @@ document.addEventListener("DOMContentLoaded", () => {
         customMenu.classList.add("show");
     }
 
+    function rotateArrow(){
+        random_arrow.style.display = "inline-block";
+        const root = document.documentElement;
+        root.style.setProperty('--final_rotation', (Math.random()*359+1000) + "deg");
+        arrow.style.animation = 'none';
+        void arrow.offsetWidth;
+        arrow.style.animation = 'spin 0.5s linear forwards';
+    }
+    
     // Attach click listener to all images with the class "fighter"
     document.querySelectorAll(".fighter").forEach(fighter => {
         fighter.addEventListener("click", openMenu);

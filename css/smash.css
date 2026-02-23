@@ -30,17 +30,24 @@ h1 { color: chocolate; }
     margin-top: 10px;
 }
 
-img {
-    font-size: 24px;
-    vertical-align: middle;
-    padding: 0px;
-}
-img.fighter { cursor: pointer; padding: 5px}
-img.newline {
-    display: block;
-    border: 0px;
-}
+img {font-size: 24px; vertical-align: middle;}
+img.fighter { cursor: pointer; padding: 5px;}
+img.newline { display: block; border: 0px;}
 #random {padding: 0px;}
+
+#arrow {
+    display: inline-block; /* transform requires a non-inline display value */
+    font-size: 150px;
+}
+
+:root {
+  --final_rotation: 360deg; /* Default value */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(var(--final_rotation)) }
+}
 
 .hide { display: none; }
 .show {
@@ -57,15 +64,4 @@ img.newline {
     display: block;
     margin-top: 5px;
     font-family: Arial, sans-serif;
-}
-
-img.arrow {
-    display: inline-block; /* transform requires a non-inline display value */
-    font-size: 50px;
-    animation: spin 4s linear;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
