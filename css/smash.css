@@ -6,7 +6,6 @@ body {
     background-position: center;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
 }
 
 h1 { color: chocolate; }
@@ -35,18 +34,39 @@ img.fighter { cursor: pointer; padding: 5px;}
 img.newline { display: block; border: 0px;}
 #random {padding: 0px;}
 
-#arrow {
-    display: inline-block; /* transform requires a non-inline display value */
-    font-size: 150px;
-}
-
 :root {
   --final_rotation: 360deg; /* Default value */
+  --y_coord: 10px;
+  --x_coord: 10px;
+}
+
+#oldarrow {
+    z-index: 100;
+    pointer-events: none;
+    display: inline-block; /* transform requires a non-inline display value */
+    line-height: 1; /* Stops the character from being pushed down */
+    width: 150px;   /* Explicit size matching font-size */
+    font-size: 150px;
+    position: fixed;
+    top: var(--y_coord, 0);
+    left: var(--x_coord, 0);
+    transform: translate(-50%, -50%);
+}
+
+#arrow {
+    z-index: 100;
+    pointer-events: none;
+    display: none; /* Hide until first click */
+    font-size: 120px;
+    position: fixed;
+    top: var(--y_coord);
+    left: var(--x_coord);
+    transform: translate(-50%, -50%); /* Centering anchor */
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(var(--final_rotation)) }
+    0% { transform: translate(-50%, -50%) rotate(0deg)}
+    100% { transform: translate(-50%, -50%) rotate(var(--final_rotation))}
 }
 
 .hide { display: none; }
