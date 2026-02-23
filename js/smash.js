@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeImage = null; 
 
     const fighters_index = new Map();
+    const home_stage_map = new Map();
+    
     fighters_index.set("Mario", "1");
     fighters_index.set("Donkey Kong", "2");
     fighters_index.set("Link", "3");
@@ -193,7 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fighters_index.set(85, "Mii Swordfighter");
     fighters_index.set(86, "Mii Gunner");
     fighters_index.set(87, "Random");
-    const home_stage_map = new Map();
     home_stage_map.set("Mario", "???");
     home_stage_map.set("Donkey Kong", "Kongo Jungle");
     home_stage_map.set("Link", "Great Plateau Tower");
@@ -314,9 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function openMenu(e) {
         e.preventDefault();
         e.stopPropagation();
-
         activeImage = e.currentTarget;
-        
 
         /* 
          * Get Fighter Upper Left = -14
@@ -400,4 +399,8 @@ document.addEventListener("DOMContentLoaded", () => {
             customMenu.classList.remove("show");
         }
     });
+
+    function loadMaps(){
+        
+    }
 });
