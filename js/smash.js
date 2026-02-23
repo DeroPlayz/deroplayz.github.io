@@ -14,12 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const lower_left = document.getElementById("lower_left");
     const upper_right = document.getElementById("upper_right");
     const lower_right = document.getElementById("lower_right");
-    const spinner = document.getElementById("spinner");
-    
-    let activeImage = null; 
 
-    const random_arrow = document.getElementById("arrow");
-    random_arrow.style.display = "none";
+    let activeImage = null; 
 
     const fighters_index = new Map();
     fighters_index.set("Mario", "1");
@@ -376,28 +372,10 @@ document.addEventListener("DOMContentLoaded", () => {
         customMenu.classList.add("show");
     }
 
-    function rotateArrow(e){
-        const root = document.documentElement;
-
-        const targetRect = e.currentTarget.getBoundingClientRect();
-        const targetX = targetRect.left - targetRect.width/4;
-        const targetY = targetRect.top - targetRect.height/2;
-        root.style.setProperty('--x_coord', targetX + "px");
-        root.style.setProperty('--y_coord', targetY + "px");
-
-        random_arrow.style.display = "inline-block";
-        const rota = (Math.random()*361+1000);
-        root.style.setProperty('--final_rotation', (Math.random()*361+1000) + "deg");
-        arrow.style.animation = 'none';
-        void arrow.offsetWidth;
-        arrow.style.animation = 'spin 0.5s linear forwards';
-    }
-    
     // Attach click listener to all images with the class "fighter"
     document.querySelectorAll(".fighter").forEach(fighter => {
         fighter.addEventListener("click", openMenu);
     });
-    document.getElementById("spinner").addEventListener("click", rotateArrow);
 
     // 3. CHANGE LOGIC: Update image and save when dropdown changes
     slot.addEventListener("change", () => {
