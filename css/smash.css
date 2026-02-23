@@ -58,3 +58,14 @@ img.newline {
     margin-top: 5px;
     font-family: Arial, sans-serif;
 }
+
+img.arrow {
+    display: inline-block; /* transform requires a non-inline display value */
+    font-size: 50px;
+    animation: spin 4s linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

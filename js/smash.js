@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation();
 
         activeImage = e.currentTarget;
-
+        
         /* 
          * Get Fighter Upper Left = -14
          * Get Fighter Above = -13
