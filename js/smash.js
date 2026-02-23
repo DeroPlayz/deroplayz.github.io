@@ -1,8 +1,11 @@
 /* smash.js */
 document.addEventListener("DOMContentLoaded", () => {
+<<<<<<< HEAD
     const choose_attacker = document.getElementById("choose_attacker");
     const resetter = document.getElementById("reset");
 
+=======
+>>>>>>> parent of 9ab01c8 (twiddled my thumbs in javascript!)
     const customMenu = document.getElementById("custom-menu");
     const menuTitle = document.getElementById("menu-title");
     const slot = document.getElementById("slot"); // Our <select> dropdown
