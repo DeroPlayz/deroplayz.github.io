@@ -1,5 +1,6 @@
 /* smash.js */
 document.addEventListener("DOMContentLoaded", () => {
+
     const customMenu = document.getElementById("custom-menu");
     const menuTitle = document.getElementById("menu-title");
     const slot = document.getElementById("slot"); // Our <select> dropdown
