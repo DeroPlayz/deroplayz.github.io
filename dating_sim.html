@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dating Sim Beta</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: #00ff66;
+        font-family: monospace;
+        padding: 20px;
+      }
+      #game-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      #game-output {
+        white-space: pre-wrap;
+        margin-bottom: 10px;
+      }
+      .input-line {
+        display: flex;
+        align-items: center;
+      }
+      .prompt {
+        margin-right: 8px;
+        font-weight: bold;
+      }
+      #cli-input {
+        background: transparent;
+        border: none;
+        color: #00ff66;
+        font-family: monospace;
+        font-size: 1em;
+        flex-grow: 1;
+        outline: none;
+      }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Where printed text goes -->
+        <div id="game-output"></div>
+
+        <!-- CLI Input Line -->
+        <div class="input-line">
+            <span class="prompt">&gt;</span>
+            <input type="text" id="cli-input" autofocus autocomplete="off" />
+        </div>
+    </div>
+
+    <script type="module" src="./Main.js"></script>
+</body>
+</html>
